@@ -296,6 +296,12 @@ button.accordion-button:focus {
   .container {
     max-width: 90%;
   }
+  .banner-text-container {
+    text-align: center;
+  }
+  .banner-section-buttons {
+    justify-content: center !important;
+  }
 }
 @media (max-width: 428px) {
   .hero-section-buttons,
