@@ -2,17 +2,7 @@
 
 Bootstrap website for a financial advisor startup. This website has a light, business-like design.
 
-## Desktop
-
 <img src="./images/desktop-screenshot.png"  />
-
-## Mobile
-
-<img src="./images/mobile1-screenshot.png"  />
-
-## Mobile (Desktop)
-
-<img src="./images/mobile2-screenshot-d.png"  />
 
 ## Features
 
