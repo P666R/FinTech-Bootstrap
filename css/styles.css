@@ -49,7 +49,7 @@ ul {
 
 ul.simple-list {
   list-style: disc;
-  margin-left: 15px;
+  margin-left: 1.5rem;
 }
 
 .py-100 {
@@ -285,15 +285,27 @@ button.accordion-button:focus {
     font-size: 1.8rem;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
   .features2-shape::after {
     width: 150%;
     height: 60%;
     top: 25%;
   }
 }
+@media (max-width: 575.98px) {
+  .container {
+    max-width: 90%;
+  }
+}
+@media (max-width: 428px) {
+  .hero-section-buttons,
+  .banner-section-buttons {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+}
 @media (min-width: 768px) {
-  .img-fluid-md {
+  .features5-img-fluid-md {
     max-width: none;
     width: auto;
     height: auto;
