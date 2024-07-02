@@ -1,25 +1,17 @@
 // Nav scroll
-
 function userScroll() {
   let hamburgerOpen = false;
   const navbar = document.querySelector('.navigation');
   const navbarCollapse = document.querySelector('#navbarCollapse');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('navbar-sticky');
-      navbar.classList.remove('py-4');
-    } else {
-      navbar.classList.remove('navbar-sticky');
-      navbar.classList.add('py-4');
-    }
+  const handleScroll = () => {
+    const scrolled = window.scrollY > 50;
+    navbar.classList.toggle('navbar-sticky', scrolled);
+    navbar.classList.toggle('py-4', !scrolled);
+    navbar.classList.toggle('navbar-opaque', !scrolled && hamburgerOpen);
+  };
 
-    if (window.scrollY <= 50 && hamburgerOpen) {
-      navbar.classList.add('navbar-opaque');
-    } else {
-      navbar.classList.remove('navbar-opaque');
-    }
-  });
+  window.addEventListener('scroll', handleScroll);
 
   navbarCollapse.addEventListener('show.bs.collapse', () => {
     hamburgerOpen = true;
@@ -34,12 +26,13 @@ function userScroll() {
       navbar.classList.remove('navbar-opaque');
     }
   });
+
+  handleScroll(); // Initial call to set the correct state on page load
 }
 
 document.addEventListener('DOMContentLoaded', userScroll);
 
 // Video Modal
-
 const videoBtn = document.querySelector('.video-btn');
 const videoModal = document.querySelector('#videoModal');
 const video = document.querySelector('#video');
@@ -65,7 +58,6 @@ if (videoModal !== null) {
 }
 
 // Wow and Odometer
-
 new WOW({
   callback: function (box) {
     var odometerElement = box.querySelector('.odometer');
@@ -77,7 +69,6 @@ new WOW({
 }).init();
 
 // Slick Carousel
-
 $(document).ready(function () {
   $('.testimonial-slider').slick({
     slidesToShow: 3,
