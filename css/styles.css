@@ -69,6 +69,10 @@ ul.simple-list {
   padding-top: 6.25rem;
 }
 
+.lead {
+  font-weight: 400;
+}
+
 .navigation {
   background-color: transparent;
   transition: all 0.5s ease-in-out;
@@ -85,8 +89,8 @@ ul.simple-list {
 }
 
 .header {
-  background: url("../images/hero-bg.jpg") no-repeat;
-  background-size: bottom cover;
+  background: url("../images/hero-bg.jpg") center bottom no-repeat;
+  background-size: cover;
   padding-top: 170px;
 }
 
@@ -236,6 +240,10 @@ button.accordion-button:focus {
   border: none;
 }
 
+.features11-card-img {
+  transform: scale(0.8);
+}
+
 .testimonials-review {
   margin: 0 15px;
 }
@@ -248,10 +256,6 @@ button.accordion-button:focus {
   padding: 6rem 4rem !important;
 }
 
-.fo-title {
-  margin-bottom: 1.2rem;
-}
-
 .fo-links a {
   text-decoration: none;
   color: inherit;
@@ -261,10 +265,24 @@ button.accordion-button:focus {
   width: 1.5rem;
 }
 
+@media (max-width: 1199.98px) {
+  .features11-text-container span {
+    font-size: 1rem;
+  }
+  .features11-text-container h3 {
+    font-size: 2.2rem;
+  }
+}
 @media (max-width: 991.98px) {
   .wow {
     animation-name: none !important;
     visibility: visible !important;
+  }
+  .features11-text-container span {
+    font-size: 0.8rem;
+  }
+  .features11-text-container h3 {
+    font-size: 1.8rem;
   }
 }
 @media (max-width: 767px) {
@@ -272,15 +290,6 @@ button.accordion-button:focus {
     width: 150%;
     height: 60%;
     top: 25%;
-  }
-  .features11-card-img {
-    width: 80%;
-  }
-  .fo-title {
-    cursor: pointer;
-  }
-  .footer-form .fo-title {
-    cursor: default;
   }
 }
 @media (min-width: 768px) {

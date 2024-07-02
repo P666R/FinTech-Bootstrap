@@ -1,25 +1,35 @@
 // Nav scroll
 
 function userScroll() {
+  let hamburgerOpen = false;
   const navbar = document.querySelector('.navigation');
   const navbarCollapse = document.querySelector('#navbarCollapse');
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       navbar.classList.add('navbar-sticky');
-      navbar.classList.remove('navbar-opaque');
+      navbar.classList.remove('py-4');
     } else {
       navbar.classList.remove('navbar-sticky');
+      navbar.classList.add('py-4');
+    }
+
+    if (window.scrollY <= 50 && hamburgerOpen) {
+      navbar.classList.add('navbar-opaque');
+    } else {
+      navbar.classList.remove('navbar-opaque');
     }
   });
 
   navbarCollapse.addEventListener('show.bs.collapse', () => {
+    hamburgerOpen = true;
     if (window.scrollY <= 50) {
       navbar.classList.add('navbar-opaque');
     }
   });
 
   navbarCollapse.addEventListener('hide.bs.collapse', () => {
+    hamburgerOpen = false;
     if (window.scrollY <= 50) {
       navbar.classList.remove('navbar-opaque');
     }
@@ -65,25 +75,6 @@ new WOW({
     }
   },
 }).init();
-
-$(document).ready(function () {
-  function toggleCollapse() {
-    if ($(window).width() <= 767) {
-      $('.fo-title').each(function () {
-        $(this).attr('data-bs-toggle', 'collapse');
-        $(this).next('.fo-links').addClass('collapse');
-      });
-    } else {
-      $('.fo-title').removeAttr('data-bs-toggle');
-      $('.fo-links').removeClass('collapse show').css('display', '');
-    }
-  }
-
-  toggleCollapse();
-  $(window).resize(function () {
-    toggleCollapse();
-  });
-});
 
 // Slick Carousel
 
