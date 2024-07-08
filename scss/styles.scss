@@ -354,6 +354,10 @@ button.accordion-button:focus {
 }
 
 @media (max-width: 575.98px) {
+  html {
+    font-size: 87.5%; /* 1rem = 14px */
+  }
+
   .container {
     max-width: 90%;
   }
@@ -368,10 +372,20 @@ button.accordion-button:focus {
 }
 
 @media (max-width: 428px) {
+  html {
+    font-size: 75%; /* 1rem = 12px */
+  }
+
   .hero-section-buttons,
   .banner-section-buttons {
     flex-direction: column;
     align-items: stretch !important;
+  }
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 62.5%; /* 1rem = 10px */
   }
 }
 
