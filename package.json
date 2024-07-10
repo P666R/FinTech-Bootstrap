@@ -1,14 +1,14 @@
 {
-  "name": "bs5-simple-starter",
+  "name": "fintech-bootstrap",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "sass:build": "sass --no-source-map scss:css",
     "sass:watch": "sass --no-source-map --watch scss:css"
   },
   "author": "PRoy",
   "license": "ISC",
-  "description": "Starter template for Bootstrap 5",
+  "description": "",
   "dependencies": {
     "bootstrap": "^5.3.3",
     "sass": "^1.77.6"
