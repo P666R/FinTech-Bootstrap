@@ -267,12 +267,15 @@ button.accordion-button:focus {
   margin: 0 15px;
 }
 
+/* Features16 Section */
 .banner-img {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.999), rgba(0, 0, 0, 0.1)), url(../images/banner-1.jpg);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.4)), url(../images/banner-1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 6rem 4rem !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .fo-links a {
