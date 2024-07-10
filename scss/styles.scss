@@ -72,6 +72,10 @@ ul.simple-list {
   padding-bottom: 3.125rem;
 }
 
+.pt-50 {
+  padding-top: 3.125rem;
+}
+
 .pt-100 {
   padding-top: 6.25rem;
 }
@@ -80,7 +84,32 @@ ul.simple-list {
   font-weight: 400;
 }
 
+// lg-25-3xl
+.custom-shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25),
+    0 4px 6px -4px rgba(0, 0, 0, 0.25);
+  border-radius: 1.5rem;
+}
+
+// lg-20-lg
+.custom-shadow-card {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2),
+    0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+
+// lg-25-lg
+.custom-shadow-card-sm {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25),
+    0 4px 6px -2px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+}
+
 // Nav Section
+
+.logo-img {
+  width: 225px;
+}
 
 .navigation {
   background-color: transparent;
@@ -100,7 +129,7 @@ ul.simple-list {
 .header {
   background: url('../images/hero-bg.jpg') center bottom no-repeat;
   background-size: cover;
-  padding-top: 170px;
+  padding-top: 10.625rem;
 }
 
 // Statistics Section
@@ -279,12 +308,6 @@ button.accordion-button:focus {
   border: none;
 }
 
-// Features11 Section
-
-.features11-card-img {
-  transform: scale(0.8);
-}
-
 // Features15 Section
 
 .testimonials-review {
@@ -376,6 +399,10 @@ button.accordion-button:focus {
     font-size: 75%; /* 1rem = 12px */
   }
 
+  .logo-img {
+    width: 15rem;
+  }
+
   .hero-section-buttons,
   .banner-section-buttons {
     flex-direction: column;
@@ -386,6 +413,10 @@ button.accordion-button:focus {
 @media (max-width: 320px) {
   html {
     font-size: 62.5%; /* 1rem = 10px */
+  }
+
+  .logo-img {
+    width: 14rem;
   }
 }
 
